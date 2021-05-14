@@ -11,7 +11,7 @@ const connectionData = {
 const client = new Client(connectionData);
 
 client.connect();
-client.query('SELECT * FROM eventrecords').then(
+client.query('SELECT * FROM employees').then(
     response => {
         console.log(response.rows);
         client.end()
