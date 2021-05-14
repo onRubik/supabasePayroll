@@ -1,0 +1,22 @@
+{
+  "name": "dzpayroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onRubik/dzPayroll.git"
+  },
+  "author": "onRubik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onRubik/dzPayroll/issues"
+  },
+  "homepage": "https://github.com/onRubik/dzPayroll#readme",
+  "dependencies": {
+    "pg": "^8.6.0"
+  }
+}

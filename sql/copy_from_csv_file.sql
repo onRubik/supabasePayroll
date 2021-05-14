@@ -1,0 +1,1 @@
+\copy eventRecords FROM 'C:\Users\onRubik\Documents\codeAmdLocal\databases\postgres\dzPayroll\eventRecordsTest.csv' DELIMITER ',' csv;
