@@ -9,7 +9,7 @@ const connectionData = {
 }
 
 const client = new Client(connectionData);
-let qObject = new Object();
+let qObject;
 
 client.connect();
 client.query('SELECT hiredate FROM employees WHERE employeeid = 19838').then(
@@ -17,9 +17,9 @@ client.query('SELECT hiredate FROM employees WHERE employeeid = 19838').then(
         qObject = response.rows;
         console.log(qObject);
         //test to manipulate the year
-        let newDate = new Date();
-        newDate.setFullYear(qObject.getFullYear()+1);
-        console.log('after: ' + newDate);
+        //let newDate = new Date();
+        // newDate.setFullYear(qObject.getFullYear()+1);
+        // console.log('after: ' + newDate);
         client.end();
     })
     .catch(err => {
