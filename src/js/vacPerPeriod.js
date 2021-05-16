@@ -12,18 +12,27 @@ const connectionData = {
 }
 
 const client = new Client(connectionData);
-let qObject;
+let qObject = new Object();
 
 client.connect();
 client.query('SELECT hiredate FROM employees WHERE employeeid = 19838').then(
     response => {
-        qObject = response.rows;
+        //qObject = response.rows;
+        const target = qObject;
+        const source = response.rows;
+        const returnTarget = Object.assign(target, source);
         console.log(qObject);
+        console.log(returnTarget);
         
         
         // when running the next two lines is gets typeerror: this is not a date object
-        let yearTest = Date.prototype.getFullYear(qObject);
-        console.log(yearTest);
+        // let yearTest = Date.prototype.getFullYear(qObject);
+        // console.log(yearTest);
+        console.log('type: ' + typeof qObject);
+
+        //trying to get key value from object:
+        console.log(Object.values(qObject));
+        console.log(Object.keys(qObject));
         
         
         //test to manipulate the year
