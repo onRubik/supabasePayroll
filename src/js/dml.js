@@ -3,16 +3,11 @@ const {createClient} = require('@supabase/supabase-js')
 
 const supabase = createClient(infoObject.supabaseUrl, infoObject.supabaseAnonKey)
 
-// supabase
-//     .from('employees')
-//     .select('*')
-//     .then(console.log)
-//     .catch(console.error)
-
-const main = async () => {
+const selectEventDesc = async (eventDesc) => {
     let {data, error} = await supabase
-        .from('employees')
-        .select('*')
+        .from('eventRecords')
+        .select('lastName, eventDate, eventDesc')
+        .like('eventDesc', eventDesc)
     
     if (error){
         console.error(error)
@@ -22,6 +17,5 @@ const main = async () => {
     console.log(data)
 }
 
-main()
 
-export {main};
+module.exports = {selectEventDesc};
