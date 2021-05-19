@@ -1,3 +1,6 @@
+# supabase url and key
+src/js/supabaseUrlKey.js
+
 # Logs
 logs
 *.log
