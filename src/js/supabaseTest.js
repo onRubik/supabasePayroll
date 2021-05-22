@@ -1,7 +1,7 @@
 const infoObject = require('./supabaseUrlKey');
 const {createClient} = require('@supabase/supabase-js')
 
-const supabase = createClient(infoObject.supabaseUrl, infoObject.supabaseAnonKey)
+// const supabase = createClient(infoObject.supabaseUrl, infoObject.supabaseAnonKey)
 
 // supabase
 //     .from('employees')
@@ -22,6 +22,8 @@ const main = async () => {
     console.log(data)
 }
 
-main()
+// main()
 
-export {main};
+console.log(infoObject.supabaseUrl)
+
+// export {main};

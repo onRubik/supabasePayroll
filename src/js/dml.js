@@ -28,12 +28,29 @@ const currentPeriod = async (empId) => {
     }
     let dateObject = new Object()
     dateObject = data[0]
-    // console.log(Object.values(dateObject))
     
     myStr = String(Object.values(dateObject))
-    console.log(myStr)
     let newDate = new Date(myStr)
-    console.log('date: ' + newDate)
+    let dateConversion = new Date(newDate)
+    let day = dateConversion.getDate() + 1
+    let month = dateConversion.getMonth()
+    let year = dateConversion.getFullYear()
+
+    let today = new Date()
+    let today2 = new Date()
+    today.setMonth(month)
+    today.setDate(day)
+
+    if(today.getTime() === today2.getTime()){
+        let period = (today.getFullYear() + ' - ' + today.getFullYear() + 1)
+        console.log("current period: " + period)
+    }
+
+    if(today.getTime() > today2.getTime()){
+        let period = ((today.getFullYear())-1 + ' - ' + today.getFullYear())
+        console.log("current period: " + period)
+    }
+
 }
 
 
