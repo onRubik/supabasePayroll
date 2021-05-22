@@ -18,6 +18,7 @@
   "homepage": "https://github.com/onRubik/dzPayroll#readme",
   "dependencies": {
     "@supabase/supabase-js": "^1.11.14",
+    "moment": "^2.29.1",
     "pg": "^8.6.0"
   }
 }

@@ -1,5 +1,6 @@
-const infoObject = require('./supabaseUrlKey');
+const infoObject = require('./supabaseUrlKey')
 const {createClient} = require('@supabase/supabase-js')
+var moment = require('moment')
 
 const supabase = createClient(infoObject.supabaseUrl, infoObject.supabaseAnonKey)
 
@@ -34,7 +35,6 @@ const currentPeriod = async (empId) => {
     let dateConversion = new Date(newDate)
     let day = dateConversion.getDate() + 1
     let month = dateConversion.getMonth()
-    let year = dateConversion.getFullYear()
 
     let today = new Date()
     let today2 = new Date()
@@ -51,10 +51,27 @@ const currentPeriod = async (empId) => {
         console.log("current period: " + period)
     }
 
+    return {
+        newDate,
+        today,
+        today2
+    }
+}
+
+const yearsInService = async (Id) => {
+    let hireDate = await currentPeriod(Id)
+    console.log('years in service: ' + moment.duration(hireDate.today2 - hireDate.newDate).years())
+    
+}
+
+const vacPerPeriod = async () => {
+
 }
 
 
 module.exports = {
     selectEventDesc,
-    currentPeriod
-};
+    currentPeriod,
+    yearsInService,
+    vacPerPeriod
+}
