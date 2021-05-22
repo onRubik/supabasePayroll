@@ -1,5 +1,5 @@
 # html not yet developed
-index.html
+webPage/
 
 # supabase url and key
 src/js/supabaseUrlKey.js
