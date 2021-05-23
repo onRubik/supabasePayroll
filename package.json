@@ -1,5 +1,5 @@
 {
-  "name": "dzpayroll",
+  "name": "supabase_payroll",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onRubik/dzPayroll.git"
+    "url": "git+https://github.com/onRubik/supabasePayroll.git"
   },
   "author": "onRubik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/onRubik/dzPayroll/issues"
+    "url": "https://github.com/onRubik/supabasePayroll/issues"
   },
-  "homepage": "https://github.com/onRubik/dzPayroll#readme",
+  "homepage": "https://github.com/onRubik/supabasePayroll#readme",
   "dependencies": {
     "@supabase/supabase-js": "^1.11.14",
     "moment": "^2.29.1",
