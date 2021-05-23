@@ -9,7 +9,7 @@ newDml.selectEventDesc()
 newDml.currentPeriod()
 
 //Find the number of years in service for an employee
-newDml.yearsInService(10490)
+newDml.yearsInService()
 
 //Count events per current period, for an employee
 newDml.selectEventCurrentPeriod()
