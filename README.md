@@ -7,6 +7,8 @@ Payroll schema using supabase (postgresql) + nodeJs
 
 Using the supabase API reference to make queries ([Link](https://supabase.io/docs/reference/javascript/supabase-client)) a simple normalized relational database is used to store event records like vacations, day offs, etc.
 
+the sql/ folder contain the CREATE TABLE code for the schema
+
 
 ## Requirements
 
