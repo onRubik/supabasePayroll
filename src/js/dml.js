@@ -1,4 +1,4 @@
-//to store the supabase Url and anon Key dave a .js file namded "supabaseUrlKey" with the next data structure
+//to store the supabase Url and anon Key, a .js file namded "supabaseUrlKey" with the next data structure
 //module.exports = {
 //    supabaseUrl: "",
 //    supabaseAnonKey: ""
