@@ -17,15 +17,15 @@ CREATE TABLE eventRecords(
     eventType text, --can be a normal record or an adjustment
     eventComment text,
     incrementalTag UUID DEFAULT uuid_generate_v4() PRIMARY KEY
-)
+);
 
 CREATE TABLE eventDesc( --to store the event options like vacations, day off, etc
     tag text,
     tagDescription text
-)
+);
 
 CREATE TABLE vacationsPolicy(
     years integer, --for a given year how many vacatios day can an employee take 
     daysPerYear integer 
     
-)
+);
